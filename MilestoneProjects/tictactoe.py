@@ -66,7 +66,6 @@ def checkboardo():
 game = 'ongoing'
 
 while game == 'ongoing':
-    print('startloop')
     printboard()
     userinput = input('Player 1 (X), Please enter number (1-9): ')
     p1.append(userinput)
@@ -74,7 +73,6 @@ while game == 'ongoing':
     printboard()
 
     userinput = input('Player 2 (O), Please enter number (1-9): ')
-    if userinput in p1:
     p2.append(userinput)
     checkboardo()
     printboard()
