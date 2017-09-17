@@ -1,4 +1,6 @@
 nine = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+p1count = 0
+p2count = 0
 
 # Global Winning Lists:
 
@@ -158,76 +160,165 @@ while True:
     player1()
 
     if p1condition():
+        p1count += 1
         playagain = ''
         while not (
             playagain == 'n' or playagain == 'N' or
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
 
     player2()
 
     if p2condition():
+        p2count += 1
         playagain = ''
         while not (
             playagain == 'n' or playagain == 'N' or
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 2 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
 
     player1()
 
     if p1condition():
+        p1count += 1
         playagain = ''
         while not (
             playagain == 'n' or playagain == 'N' or
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
 
     player2()
 
     if p2condition():
+        p2count += 1
         playagain = ''
         while not (
             playagain == 'n' or playagain == 'N' or
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 2 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
 
     player1()
 
     if p1condition():
+        p1count += 1
         playagain = ''
         while not (
             playagain == 'n' or playagain == 'N' or
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
     else:
         playagain = input('Draw Game!, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
-            print('Thanks for playing. Goodbye.')
+            if p1count > p2count:
+                p1count = p1count - p2count
+                print(
+                    '\nPlayer 1 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
+            elif p1count < p2count:
+                p2count = p2count - p1count
+                print(
+                    '\nPlayer 2 Wins by %d Games.\n\
+Thanks for playing. Goodbye.' % (p2count))
+            elif p1count == p2count:
+                print(
+                    '\nTotal Games = Draw. Player 1 & Player 2 Tied at %d Games.\n\
+Thanks for playing. Goodbye.' % (p1count))
             break
         elif playagain == 'y' or playagain == 'Y':
+            print('\nPlayer 1 Score: ', p1count, '\nPlayer 2 Score: ', p2count)
             continue
