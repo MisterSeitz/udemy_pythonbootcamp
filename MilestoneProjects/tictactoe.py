@@ -19,18 +19,16 @@ line3 = '| 4 | 5 | 6 |'
 line4 = ' --- --- --- '
 line5 = '| 1 | 2 | 3 |'
 
-# Function That Prints Board Based On Current Global Line Values
-
 
 def printboard():
+    ''' Function That Prints Board Based On Current Global Line Values '''
     global line1, line2, line3, line4, line5
     print(
         '\n', line1, '\n', line2, '\n', line3, '\n', line4, '\n', line5, '\n')
 
-# Function That Resets Board To Global Default Lines
-
 
 def reset():
+    ''' Function That Resets Board To Global Default Lines '''
     global line1, line2, line3, line4, line5
     line1 = '| 7 | 8 | 9 |'
     line2 = ' --- --- --- '
@@ -38,10 +36,9 @@ def reset():
     line4 = ' --- --- --- '
     line5 = '| 1 | 2 | 3 |'
 
-# Funtion that replaces number with X for Player1
-
 
 def checkboardx():
+    ''' Funtion that replaces number on board with X for Player1 '''
     global line1, line2, line3, line4, line5
     if userinput in line1[2]:
         line1 = line1.replace("7", "X")
@@ -62,10 +59,9 @@ def checkboardx():
     elif userinput in line5[10]:
         line5 = line5.replace("3", "X")
 
-# Funtion that replaces number with O for Player2
-
 
 def checkboardo():
+    ''' Funtion that replaces number on board with O for Player2 '''
     global line1, line2, line3, line4, line5
     if userinput in line1[2]:
         line1 = line1.replace("7", "O")
@@ -86,10 +82,9 @@ def checkboardo():
     elif userinput in line5[10]:
         line5 = line5.replace("3", "O")
 
-# Player1 Function That Checks & Displays Board
-
 
 def player1():
+    ''' Player1 Function That Checks & Displays Board '''
     global userinput
     userinput = input('Player 1 (X), Please enter number (1-9): ')
     while userinput not in nine or userinput in p1 or userinput in p2:
@@ -100,10 +95,9 @@ def player1():
         checkboardx()
         printboard()
 
-# Player2 Function That Checks & Displays Board
-
 
 def player2():
+    ''' Player2 Function That Checks & Displays Board '''
     global userinput
     userinput = input('Player 2 (O), Please enter number (1-9): ')
     while userinput not in nine or userinput in p1 or userinput in p2:
@@ -114,10 +108,9 @@ def player2():
         checkboardo()
         printboard()
 
-# Player1 Win Determination Function
-
 
 def p1condition():
+    ''' Function To Check Board For Player1 Win Determination '''
     global wl1, wl2, wl3, wl4, wl5, wl6, wl7, wl8
     if all(item in p1 for item in wl1) or \
         all(item in p1 for item in wl2) or \
@@ -129,10 +122,9 @@ def p1condition():
             all(item in p1 for item in wl8):
             return True
 
-# Player2 Win Determination Function
-
 
 def p2condition():
+    ''' Function To Check Board For Player2 Win Determination '''
     global wl1, wl2, wl3, wl4, wl5, wl6, wl7, wl8
     if all(item in p2 for item in wl1) or \
         all(item in p2 for item in wl2) or \
@@ -172,6 +164,7 @@ while True:
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
@@ -185,6 +178,7 @@ while True:
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 2 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
@@ -198,6 +192,7 @@ while True:
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
@@ -211,6 +206,7 @@ while True:
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 2 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
@@ -224,12 +220,14 @@ while True:
                 playagain == 'y' or playagain == 'Y'):
                 playagain = input('Player 1 Wins, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
     else:
         playagain = input('Draw Game!, Play Again (Y/N)? ')
         if playagain == 'n' or playagain == 'N':
+            print('Thanks for playing. Goodbye.')
             break
         elif playagain == 'y' or playagain == 'Y':
             continue
