@@ -1,4 +1,5 @@
 import random
+import sys
 
 class Card(object):
 
@@ -30,7 +31,7 @@ class Card(object):
         return "Rank: %s, Points: %s" %(self.rank, self.points)
 
 class Player(object):
-    def __init__(self, name, bankroll = 1000.00):
+    def __init__(self, name, bankroll = 1000.0):
         self.name = name
         self.bankroll = bankroll
 
@@ -916,6 +917,7 @@ while True:
     while True:
         try:
             bet = float(input('\nYour current Bank Roll is %d, How much do you want to bet? ' % (player1.bankroll)))
+            bet = round(bet)
             if bet == 0:
                 print('Cannot bet 0 as valid bet, Please enter a valid number between 1 and ', player1.bankroll)
             elif bet <= player1.bankroll:
@@ -1356,7 +1358,7 @@ while True:
                     print('\n========== Dealer Wins ==========\n')
                     if player1.bankroll == 0:
                         print('Your Bankroll is Depleted. Game Over!')
-                        break
+                        sys.exit()
                     else:
                         player1count = -1
                         pass
@@ -2072,7 +2074,7 @@ while True:
                                 print('\n========== Dealer Wins ==========\n')
                                 if player1.bankroll == 0:
                                     print('Your Bankroll is Depleted. Game Over!')
-                                    break
+                                    sys.exit()
                                 else:
                                     player1count = -1
                                     pass
@@ -2784,7 +2786,7 @@ while True:
                                             print('\n========== Dealer Wins ==========\n')
                                             if player1.bankroll == 0:
                                                 print('Your Bankroll is Depleted. Game Over!')
-                                                break
+                                                sys.exit()
                                             else:
                                                 player1count = -1
                                                 pass
@@ -3495,7 +3497,7 @@ while True:
                                                         print('\n========== Dealer Wins ==========\n')
                                                         if player1.bankroll == 0:
                                                             print('Your Bankroll is Depleted. Game Over!')
-                                                            break
+                                                            sys.exit()
                                                         else:
                                                             player1count = -1
                                                             pass
@@ -4205,7 +4207,7 @@ while True:
                                                                     print('\n========== Dealer Wins ==========\n')
                                                                     if player1.bankroll == 0:
                                                                         print('Your Bankroll is Depleted. Game Over!')
-                                                                        break
+                                                                        sys.exit()
                                                                     else:
                                                                         player1count = -1
                                                                         pass
@@ -4917,7 +4919,7 @@ while True:
                                                                                 print('\n========== Dealer Wins ==========\n')
                                                                                 if player1.bankroll == 0:
                                                                                     print('Your Bankroll is Depleted. Game Over!')
-                                                                                    break
+                                                                                    sys.exit()
                                                                                 else:
                                                                                     player1count = -1
                                                                                     pass
@@ -5629,7 +5631,7 @@ while True:
                                                                                             print('\n========== Dealer Wins ==========\n')
                                                                                             if player1.bankroll == 0:
                                                                                                 print('Your Bankroll is Depleted. Game Over!')
-                                                                                                break
+                                                                                                sys.exit()
                                                                                             else:
                                                                                                 player1count = -1
                                                                                                 pass
@@ -6341,7 +6343,7 @@ while True:
                                                                                                         print('\n========== Dealer Wins ==========\n')
                                                                                                         if player1.bankroll == 0:
                                                                                                             print('Your Bankroll is Depleted. Game Over!')
-                                                                                                            break
+                                                                                                            sys.exit()
                                                                                                         else:
                                                                                                             player1count = -1
                                                                                                             pass
@@ -7054,7 +7056,7 @@ while True:
                                                                                                                     print('\n========== Dealer Wins ==========\n')
                                                                                                                     if player1.bankroll == 0:
                                                                                                                         print('Your Bankroll is Depleted. Game Over!')
-                                                                                                                        break
+                                                                                                                        sys.exit()
                                                                                                                     else:
                                                                                                                         player1count = -1
                                                                                                                         pass
@@ -7766,7 +7768,7 @@ while True:
                                                                                                                                 print('\n========== Dealer Wins ==========\n')
                                                                                                                                 if player1.bankroll == 0:
                                                                                                                                     print('Your Bankroll is Depleted. Game Over!')
-                                                                                                                                    break
+                                                                                                                                    sys.exit()
                                                                                                                                 else:
                                                                                                                                     player1count = -1
                                                                                                                                     pass
