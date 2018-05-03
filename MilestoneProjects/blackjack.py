@@ -975,7 +975,7 @@ while True:
                 else:
                     pass
 
-            elif dealercount > player1count:
+            elif dealercount > player1count and dealercount < 21:
                 print('Dealers Total Card Value: ', dealercount)
                 print('\n========== Dealer Wins ==========\n')
                 if player1.bankroll == 0:
